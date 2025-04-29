@@ -11,7 +11,7 @@ public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
     public MyWorld() {
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         
         //create the elephant object
         Elephant elephant = new Elephant();
@@ -22,7 +22,7 @@ public class MyWorld extends World {
         addObject(scoreLabel, 50, 50);
         
         
-        createApple();
+        spawnApple();
     }
     
     /**
@@ -47,7 +47,7 @@ public class MyWorld extends World {
      * Create a new apple at a random location at top of screen
      */
     
-    public void createApple()
+    public void spawnApple()
     {
         Apple apple = new Apple();
         int x = Greenfoot.getRandomNumber(600);
