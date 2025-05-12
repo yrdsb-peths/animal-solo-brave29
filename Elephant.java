@@ -32,7 +32,7 @@ public class Elephant extends Actor
     public void animateElephant()
     {
         setImage(idle[imageIndex]);
-        imageIndex = imageIndex + 1 % idle.length;
+        imageIndex = (imageIndex + 1) % idle.length;
     }
     
     public void act()
